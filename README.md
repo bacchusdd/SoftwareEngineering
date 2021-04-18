@@ -1,6 +1,6 @@
 # SoftwareEngineering
 
-'Camera Motion Sensing Project for Home Security' project for 2021-1 software engineering class
+**'Camera Motion Sensing Project for Home Security'** project for 2021-1 software engineering class
 
 
 ## Problem Statement
@@ -8,13 +8,17 @@
 
 
 ## Subproblems
-1. 모션 감지 : 일정 시간 이상의 움직임 감지
+1. **모션 감지** : 일정 시간 이상의 움직임 감지
 - 직접적인 행동 (창문에 물리적 힘을 가한다, 현관 잠금 해제를 시도한다, 침입한다) 이전에 일정시간 이상의 예외적인 움직임을 감지하여 범죄 예방 할 방법이 필요하다
-2. History 관리 : 이상 행위 감지 시 화면 사진 저장, 저장된 사진 관리
+2. **History 관리** : 이상 행위 감지 시 화면 사진 저장, 저장된 사진 관리
 - 집에 사람이 없어도 보안 시스템이 작동해야 한다, 과거 자료를 필요할 땐 사용할 수 있어야 하고 저장 공간을 정기적으로 확보해야 한다
-3. Admin 관리 : 활성화/비활성화(특정 시간 비활성화 등), 보안코드 설정, 알림 설정(해지 등) 등의 수동 조작 기능.
+3. **Admin 관리** : 활성화/비활성화(특정 시간 비활성화 등), 보안코드 설정, 알림 설정(해지 등) 등의 수동 조작 기능.
 - 시스템이 감지한 움직임을 매뉴얼하게 구별할 필요도 있다 (배달원, 이웃주민, 청소부 등의 모션 감지 시), 문제 파악 시 수동 조작이 편리해야 한다
 
 
 ## Method
 Agile
+
+
+## Etc.
+[Camera Motion Sensing Project](https://nevonprojects.com/camera-motion-sensing-project/)
