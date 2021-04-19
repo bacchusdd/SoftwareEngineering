@@ -1,6 +1,6 @@
-# Requirements
+# Requirement
 
-### Functional Requirements
+### Functional Requirement
 Identifier | User Story | Size
 :---------:|-----------|:----:
 REQ-1 | 사용자로서, 나는 회원가입을 할 수 있다. | 1
@@ -17,7 +17,7 @@ REQ-11 | 기기는 카메라에 움직임이 감지되면 사진을 저장하고
 REQ-12 | 기기는 모니터링이 너무 오랜시간 지속되는 경우, 프로그램을 종료하고 사용자에게 알림을 전송한다. | 2
 REQ-13 | 기기는 의도치 않게 카메라가 꺼진 경우 사용자에게 알림을 전송한다. | 1
 
-### Non-Functional Requirements
+### Non-Functional Requirement
 Identifier | User Story | Size
 :---------:|-----------|:----:
 REQ-14 | 프로그램은 안정적으로 끊김없는 모니터링을 제공해야 한다. | 2
