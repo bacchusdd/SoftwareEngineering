@@ -25,6 +25,8 @@
 ## Method
 Agile
 
-## [Requirement](Requirements.md)
+## [Requirement](Requirement.md)
+Documentation about requirements.
 
 ## [Use Case](UseCase.md)
+Documentation about use cases.
