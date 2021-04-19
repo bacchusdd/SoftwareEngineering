@@ -99,3 +99,13 @@ Database / Repository | 사용자의 정보, 로그인 내역, 기기 정보 저
 
 ## Traceability Matrix
 ![image](image/TraceabilityMatrix.png)
+
+## Use Case Diagram
+### Motion Detection
+![image](image/UCD-MotionDetection.png)
+
+### Admin Subsystem
+![image](image/UCD-AdminSubsystem.png)
+
+### History Management Subsystem
+![image](image/UCD-HistoryManagementSubsystem.png)
