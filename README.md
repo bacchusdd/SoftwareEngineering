@@ -8,4 +8,4 @@
 ## Related project
 [Camera Motion Sensing Project](https://nevonprojects.com/camera-motion-sensing-project/) : Related project link.
 
-[Camera Motion Sensing Project PDF](Camera Motion Sensing Project.pdf) : Related project PDF file.
+[Camera Motion Sensing Project PDF](CameraMotionSensingProject.pdf) : Related project PDF file.
