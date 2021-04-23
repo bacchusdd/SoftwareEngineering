@@ -9,7 +9,7 @@ PageNum | UI Image | Explanation
 3 | ![image](image/03_home_phone.png) | 휴대용 핸드폰 기기 홈 화면. 시작을 누르면 모니터링을 시작한다.
 4 | ![image](image/04_monitoring.png) | 모니터링 중인 화면이다. 화면에는 카메라 기기로 촬영하고 있는 장면이 나온다. (현 화면은 임의의 사진을 집어넣은 것임) 모니터링 중지 버튼으로 모니터링을 멈출 수 있으며, 설정과 갤러리 버튼은 오른쪽 위로 옮겨졌다.
 5 | ![image](image/05_stop.png) | 모니터링 중지 버튼을 누르면 나오는 잠시 나오는 화면으로, 바로 6번 화면으로 바뀐다. (가운데 원만 바뀌는 것)
-6 | ![image](image/06_afterstop.png) | 
+6 | ![image](image/06_afterstop.png) | 모니터링 중지가 완료되면 다시 홈화면으로 돌아간다.
 7 | ![image](image/07_gallery.png) | 갤러리 탭을 누르면 나오는 화면. 왼쪽 상단의 화살표로 이전 화면으로 돌아갈 수 있으며, 날짜를 클릭하면 해당 날의 사진들을 볼 수 있다.
 8 | ![image](image/08_pickphoto.png) | 갤러리에서 사진을 고르면 해당 사진을 크게 볼 수 있으며, 사진을 삭제할 수 있다.
 9 | ![image](image/09_settings.png) | 설정 탭을 누르면 나오는 화면. 
