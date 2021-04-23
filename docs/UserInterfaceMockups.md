@@ -11,7 +11,7 @@ PageNum | UI Image | Explanation
 5 | ![image](image/05_stop.png) | 모니터링 중지 버튼을 누르면 나오는 잠시 나오는 화면으로, 바로 6번 화면으로 바뀐다. (가운데 원만 바뀌는 것)
 6 | ![image](image/06_afterstop.png) | 
 7 | ![image](image/07_gallery.png) | 갤러리 탭을 누르면 나오는 화면. 왼쪽 상단의 화살표로 이전 화면으로 돌아갈 수 있으며, 날짜를 클릭하면 해당 날의 사진들을 볼 수 있다.
-8 | ![image](image/08_.png) | 갤러리에서 사진을 고르면 해당 사진을 크게 볼 수 있으며, 사진을 삭제할 수 있다.
+8 | ![image](image/08_pickphoto.png) | 갤러리에서 사진을 고르면 해당 사진을 크게 볼 수 있으며, 사진을 삭제할 수 있다.
 9 | ![image](image/09_settings.png) | 설정 탭을 누르면 나오는 화면. 
 10 | ![image](image/10_logsetaccess.png) | 로그인 설정에 들어가려면 우선 비밀번호를 입력해야한다.
 11 | ![image](image/11_editpw.png) | 비밀번호 변경과 회원탈퇴 기능이 제공된다.
