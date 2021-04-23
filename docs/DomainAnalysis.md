@@ -2,6 +2,8 @@
 
 ### Concept Definitions
 
+![Domain_Model_Monitoring](image/Domain_Model_Monitoring.png)
+
 Responsibility Description | Type | Concept Name
 ---------------------------|:----:|:-----------:
 전반적인 모든 concept들의 행동을 제어하고 다른 concept들에게 행동을 위임한다.| D | Controller
