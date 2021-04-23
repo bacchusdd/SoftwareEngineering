@@ -4,4 +4,4 @@
 
 PageNum | UI Image | Explanation
 :----:|---------|:-----------:
-1 | ![image](image/01_first.pdf) | 
+1 | ![image](image/01_first.png) | 
