@@ -1,8 +1,13 @@
 # Domain Analysis
 
 ### Concept Definitions
+Domain Model for Admin</br>
+![Domain Model Admin](image/domain_model_admin.png)
 
+Domain Model for Monitoring</br>
 ![Domain_Model_Monitoring](image/Domain_Model_Monitoring.png)
+
+Domain Model for Access History</br>
 ![Domain Model Access History](image/domain_model_accesshistory.png)
 
 Responsibility Description | Type | Concept Name
@@ -32,6 +37,10 @@ Controller ↔ Alarm Operator | Controller는 경보 상태가 되면 Alarm Oper
 Controller ↔ Notifier | Controller는 경보 상태가 되면 Notifier에게 감지 정보를 전달하고 사용자에게 알림을 전송하도록 지시한다. | give detect info
 Controller ↔ Photo Saver | Controller는 경보 상태가 되면 Photo Saver에게 촬영한 사진을 전달하고 Database에 저장하도록 지시한다. | give photo
 Photo Saver ↔ Database | Photo Saver는 현재 날짜 및 시각을 구해서 촬영된 사진과 함께 Database에 저장한다. | save photo with date
+Controller ↔ Login Store | Controller는 로그인 정보가 저장되어야 할 때 Login Store로 로그인 정보를 저장하도록 지시한다. | conveys requests
+Controller ↔ Login Check | Controller는 로그인 정보를 확인하려고 할 때 Login Check로 로그인 정보가 일치하는지 확인하도록 지시한다. | conveys requests
+Login Check ↔ Key | Key의 ID와 Password 값과 Login Check가 확인하려는 정보가 일치하는 지 확인한다. | verifies
+Login Store ↔ Key | Key에 Login Store가 저장하려는 로그인 정보를 저장한다. | save data
 Controller ↔ Display History | Controller는 Display History가 모니터링 기록을 보여주도록 지시한다. | conveys requests
 Display History ↔ Database | DataBase는 Display History에게 특정한 날짜의 데이터를 제공한다. | provide data
 Delete History ↔ Database | Delete History는 Database에 있는 특정한 날짜의 데이터를 삭제한다. | modify data
@@ -84,6 +93,49 @@ Delete History ↔ Database | Delete History는 Database에 있는 특정한 날
   <tr>
     <td>timeStamp</td>
     <td>움직임이 감지됐을 당시에 기록된 날짜 및 시간</td>
+  </tr>
+  <tr>
+    <td>User Register</td>
+    <td>Login Information</td>
+    <td>회원가입 시 입력하는 로그인 정보</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Key</td>
+    <td>ID</td>
+    <td>사용자를 식별하는 ID</td>
+  </tr>
+  <tr>
+    <td>Password</td>
+    <td>해당 사용자임을 인증하는 비밀번호</td>
+  </tr>
+  <tr>
+    <td rowspan="2">CameraSetting</td>
+    <td>SetCamera</td>
+    <td>기기를 모니터링 카메라로 설정한다.</td>
+  </tr>
+  <tr>
+    <td>DeleteCamera</td>
+    <td>모니터링 카메라로 설정한 기기를 삭제한다.</td>
+  </tr>
+  <tr>
+    <td>Login Store</td>
+    <td>Validity Check</td>
+    <td>로그인 정보를 저장하기 전 실시하는 유효성 검사</td>
+  </tr>
+  <tr>
+    <td>Change Password</td>
+    <td>newPassword</td>
+    <td>새로 변경하는 비밀번호</td>
+  </tr>
+  <tr>
+    <td>Access History</td>
+    <td>SlectDate</td>
+    <td>접근하려고 하는 기록의 날짜</td>
+  </tr>
+  <tr>
+    <td>Delete History</td>
+    <td>SelectDate</td>
+    <td>삭제하려고 하는 기록의 날짜</td>
   </tr>
 </table>
 
