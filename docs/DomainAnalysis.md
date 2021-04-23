@@ -1,18 +1,9 @@
 # Domain Analysis
 
-## for Use Case 1, 2, 3, 4
-
-### Concept Definitions
-
-### Association Definitions
-
-### Attribute Definitions
-
-## for Use Case 5, 6, 7, 9, 10, 11
-
 ### Concept Definitions
 
 ![Domain_Model_Monitoring](image/Domain_Model_Monitoring.png)
+![Domain Model Access History](image/domain_model_accesshistory.png)
 
 Responsibility Description | Type | Concept Name
 ---------------------------|:----:|:-----------:
@@ -22,6 +13,16 @@ Responsibility Description | Type | Concept Name
 움직임이 감지되면 촬영된 사진을 날짜와 함께 Database/repository에 저장한다. | D | Photo Saver
 움직임이 감지돼서 경보 상태에 진입하게 되면 사용자 기기에게 알림을 전송한다. | D | Notifier
 사용자의 로그인 정보에 따른 카메라 등록 정보, 설정 값, 갤러리를 저장. | K | Database
+회원가입을 통해 사용자를 새로 등록한다. | D | User Register
+사용자가 설정한 ID 및 Password 정보. | K | Key
+사용자가 ID와 Password를 입력해 로그인할 수 있게 한다. | D | User Login
+로그인을 위한 ID 및 Password 정보를 저장한다. 저장하기 전에 ID 및 Password가 지정된 형식에 맞는지 검사한다. | D | Login Store
+사용자가 로그인할 때, ID 및 Password 정보가 일치하는 지 확인한다. | D | Login Checker
+사용자가 비밀번호를 변경할 수 있도록 한다. 현재 비밀번호를 다시 입력받아 확인하고 새로운 비밀번호를 설정한다. | D | Change Password
+모니터링할 카메라를 설정하거나 삭제한다. | D | CameraSetting
+모니터링 기록에 접근한다. | D | Access History
+사용자가 접근하고자 하는 기록을 보여준다. | D | Display History
+특정 날짜의 모니터링 기록을 삭제한다. | D | Delete History
 
 ### Association Definitions
 Concept Pair | Association Description | Association Name
@@ -31,6 +32,10 @@ Controller ↔ Alarm Operator | Controller는 경보 상태가 되면 Alarm Oper
 Controller ↔ Notifier | Controller는 경보 상태가 되면 Notifier에게 감지 정보를 전달하고 사용자에게 알림을 전송하도록 지시한다. | give detect info
 Controller ↔ Photo Saver | Controller는 경보 상태가 되면 Photo Saver에게 촬영한 사진을 전달하고 Database에 저장하도록 지시한다. | give photo
 Photo Saver ↔ Database | Photo Saver는 현재 날짜 및 시각을 구해서 촬영된 사진과 함께 Database에 저장한다. | save photo with date
+Controller ↔ Display History | Controller는 Display History가 모니터링 기록을 보여주도록 지시한다. | conveys requests
+Display History ↔ Database | DataBase는 Display History에게 특정한 날짜의 데이터를 제공한다. | provide data
+Delete History ↔ Database | Delete History는 Database에 있는 특정한 날짜의 데이터를 삭제한다. | modify data
+
 
 ### Attribute Definitions
 <table>
@@ -82,10 +87,3 @@ Photo Saver ↔ Database | Photo Saver는 현재 날짜 및 시각을 구해서 
   </tr>
 </table>
 
-## for Use Case 8
-
-### Concept Definitions
-
-### Association Definitions
-
-### Attribute Definitions
