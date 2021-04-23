@@ -83,3 +83,9 @@ Photo Saver ↔ Database | Photo Saver는 현재 날짜 및 시각을 구해서 
 </table>
 
 ## for Use Case 8
+
+### Concept Definitions
+
+### Association Definitions
+
+### Attribute Definitions
