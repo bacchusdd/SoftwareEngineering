@@ -30,3 +30,6 @@ Documentation about requirements.
 
 ## [Use Case](UseCase.md)
 Documentation about use cases.
+
+## [User Interface Mockups](UserInterfaceMockups.md)
+Documentation about user interface mockups.
