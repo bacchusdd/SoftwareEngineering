@@ -33,3 +33,6 @@ Documentation about use cases.
 
 ## [User Interface Mockups](UserInterfaceMockups.md)
 Documentation about user interface mockups.
+
+## [Domain Analysis](DomainAnalysis.md)
+Documentation about domain analysis
