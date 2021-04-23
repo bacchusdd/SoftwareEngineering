@@ -26,7 +26,7 @@ Database / Repository | 사용자의 정보, 로그인 내역, 기기 정보 저
   <details>
   <summary>Use Case 1: Register</summary>
 
-  ![image](image/UC-2.png)
+  ![image](image/UC-1.png)
   </details>
 
   <details>
