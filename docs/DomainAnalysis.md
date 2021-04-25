@@ -139,3 +139,5 @@ Delete History ↔ Database | Delete History는 Database에 있는 특정한 날
   </tr>
 </table>
 
+### Traceability Matrix
+![Traceability_Matrix](image/Traceability_Matrix_of_Domain_Analysis.png)
