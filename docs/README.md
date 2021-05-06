@@ -36,3 +36,6 @@ Documentation about user interface mockups.
 
 ## [Domain Analysis](DomainAnalysis.md)
 Documentation about domain analysis
+
+## [Meeting Records](MeetingRecords.md)
+Records of our team meetings.
