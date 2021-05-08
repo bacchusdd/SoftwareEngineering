@@ -25,7 +25,7 @@
 </details>
 
 <details>
-<summary>UC-2 diagram</summary>
+<summary>UC-2 sequence diagram</summary>
 </br>
 
 ![UC-2](diagram/UC-2-sequence.svg)
