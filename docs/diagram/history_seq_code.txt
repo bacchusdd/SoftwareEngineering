@@ -1,0 +1,16 @@
+title History - UC:8
+participant User
+participant DateList
+participant PhotoList
+participant ExpandedPhoto
+participant DB
+
+User->DateList:accessalbum()
+DB-->DateList:showdates()
+DateList->DB:searchsamedate()
+DB-->PhotoList:returnsamedate()
+PhotoList->DB:searchimg()
+DB-->ExpandedPhoto:returnimg()
+ExpandedPhoto->DB:deletephoto()
+
+//note over ExpandedPhoto,DB: 
