@@ -18,3 +18,6 @@
 ![UC-8](diagram/UC-1-sequence.svg)
 </details>
 
+<details>
+<summary>sequence diagram trials</summary>
+</br>
