@@ -5,17 +5,12 @@
 <summary>UC-8 class diagram</summary>
 </br>
 
-<details>
-</br>
 
 
 ## Object Sequence Diagram
 
 <details>
 <summary>UC-8 sequence diagram</summary>
-</br>
-
-<details>
 </br>
 
 
