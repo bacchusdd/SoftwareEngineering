@@ -25,6 +25,6 @@
 
 ![UC-8](diagram/history_trial_1.jpg)
 ![UC-8](diagram/history_trial_2.jpg)
-![UC-8](diagram/history_seq_code.txt)
+![UC-8 sequence diagram code](diagram/history_seq_code.txt)
 
 </details>
