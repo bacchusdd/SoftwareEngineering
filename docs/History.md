@@ -13,7 +13,9 @@
 <details>
 <summary>UC-8 sequence diagram</summary>
 </br>
+
 ![UC-8](diagram/history_seq.svg)
+
 </details>
 
 
