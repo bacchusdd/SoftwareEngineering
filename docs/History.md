@@ -20,4 +20,4 @@
 <summary>sequence diagram trials</summary>
 </br>
 
-![UC-8](history_trial_1.jpg)
+![UC-8](diagram/history_trial_1.jpg)
