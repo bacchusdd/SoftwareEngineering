@@ -14,7 +14,7 @@
 <summary>UC-8 sequence diagram</summary>
 </br>
 
-![sequence_diagram](diagram/history_sequence_diagram1.png)
+![sequence_diagram](diagram/history_sequence_diagram_1.png)
 </br>
 
 </details>
