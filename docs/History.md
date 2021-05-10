@@ -14,7 +14,7 @@
 <summary>UC-8 sequence diagram</summary>
 </br>
 
-![UC-8](diagram/history_sequence_diagram .png)
+<img src="docs/diagram/history_sequence_diagram .png">
 
 </details>
 
@@ -26,6 +26,8 @@
 </br>
 Database가 Display History를 call하는 것은 Database의 기능에 맞지 않다고 판단하여 두번째 설계로 결정하였다.
 </br>
-![UC-8](diagram/history_sequence_trials.jpg)
+
+<img src="docs/diagram/history_sequence_trials.jpg">
+
 
 </details>
