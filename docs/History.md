@@ -11,6 +11,14 @@
 </details>
 
 
+<details>
+<summary>sequence diagram trials</summary>
+</br>
+![class_diagram_trial](diagram/history_class_dg.png)
+</br>
+</details>
+
+
 ## Object Sequence Diagram
 
 <details>
