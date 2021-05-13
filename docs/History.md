@@ -14,7 +14,9 @@
 <details>
 <summary>sequence diagram trials</summary>
 </br>
-![class_diagram_trial](diagram/history_class_dg.png)
+
+![class_diagram_trial](diagram/history_class_trial.jpg)
+
 </br>
 </details>
 
