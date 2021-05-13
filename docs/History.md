@@ -4,7 +4,7 @@
 <details>
 <summary>UC-8 class diagram</summary>
 </br>
-
+![sequence_diagram](diagram/history_class_dg.png)
 </details>
 
 
