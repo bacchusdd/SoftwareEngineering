@@ -5,7 +5,7 @@ Domain Model for Admin</br>
 ![Domain Model Admin](image/domain_model_admin.png)
 
 Domain Model for Monitoring</br>
-![Domain_Model_Monitoring](image/Domain_Model_Monitoring.png)
+![Domain_Model_Monitoring](image/Domain_Model_Monitoring.jpg)
 
 Domain Model for Access History</br>
 ![Domain Model Access History](image/domain_model_accesshistory.png)
