@@ -5,6 +5,7 @@
 <summary>UC-8 class diagram</summary>
 </br>
 ![class_diagram](diagram/history_class_dg.png)
+</br>
 </details>
 
 
