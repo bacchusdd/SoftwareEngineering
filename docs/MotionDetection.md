@@ -3,20 +3,18 @@
 ## Class diagrams
 
 <details>
-<summary>UC-5 StartMonitoring class diagram</summary>
+<summary>UC-5 StartMonitoring & UC-6 StopMonitoring class diagram</summary>
 </br>
 
-</details>
-
-<details>
-<summary>UC-6 StopMonitoring class diagram</summary>
-</br>
+![class_UC5_6](diagram/UC-5_6_class.jpg)
 
 </details>
 
 <details>
 <summary>UC-7 StopAlarm class diagram</summary>
 </br>
+
+![class_UC_7](diagram/UC-7_stop_alarm_class.jpg)
 
 </details>
 
