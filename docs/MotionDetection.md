@@ -44,7 +44,7 @@
 <summary>UC-5 StartMonitoring sequence diagram</summary>
 </br>
 
-![sdUC-5](diagram/UC-5_start_monitoring.png)
+![sdUC-5](diagram/UC-5_start_monitoring.jpg)
 
 </details>
 
@@ -52,7 +52,7 @@
 <summary>UC-6 StopMonitoring sequence diagram</summary>
 </br>
 
-![sdUC-6](diagram/UC-6_stop_monitoring.png)
+![sdUC-6](diagram/UC-6_stop_monitoring.jpg)
 
 </details>
 
@@ -60,7 +60,7 @@
 <summary>UC-7 StopAlarm sequence diagram</summary>
 </br>
 
-![sdUC-7](diagram/UC-7_stop_alarm.png)
+![sdUC-7](diagram/UC-7_stop_alarm.jpg)
 
 </details>
 
