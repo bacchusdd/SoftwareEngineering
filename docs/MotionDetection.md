@@ -68,17 +68,23 @@
 <summary>UC-9 DetectMotion sequence diagram</summary>
 </br>
 
+![sdUC-5](diagram/UC-9_MotionDetection_0.jpg)
+
 </details>
 
 <details>
 <summary>UC-10 TakePhoto sequence diagram</summary>
 </br>
 
+![sdUC-5](diagram/UC-10_TakePhoto_0.jpg)
+
 </details>
 
 <details>
 <summary>UC-11 SendAlert sequence diagram</summary>
 </br>
+
+![sdUC-5](diagram/UC-11_SendAlert_0.jpg)
 
 </details>
 
