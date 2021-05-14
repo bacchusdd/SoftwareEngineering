@@ -90,8 +90,16 @@
 <summary>sequence diagram trials</summary>
 </br>
 
-아래는 이전 커밋의 UC-5 sequence diagram 사진. MotionDetector가 camera를 시작하는 동시에 user에게 카메라의 시작을 알려주기도 했으나 MotionDetector는 user에게 알려주는 기능까지 할 필요없다고 판단, 높아지는 coupling을 감수하고 더 나은 cohesion을 얻도록 수정된 diagram에서는 Notifier에게 알려주는 기능을 위임함.
+이전 커밋의 UC-5 sequence diagram. MotionDetector가 camera를 시작하는 동시에 user에게 카메라의 시작을 알려주기도 했으나 MotionDetector는 user에게 알려주는 기능까지 할 필요없다고 판단, 높아지는 coupling을 감수하고 더 나은 cohesion을 얻도록 수정된 diagram에서는 Notifier에게 알려주는 기능을 위임함.
 
 ![trial_UC5](diagram/UC-5_start_monitoring_sequence_trial.jpg)
+
+이전 커밋의 UC-6 sequence diagram. UC-5와 마찬가지로 MotionDetector에서 카메라를 종료하면 user에게 알려주는 기능을 Notifier에게 위임하도록 수정함.
+
+![trial_UC6](diagram/UC-6_stop_monitoring_sequence_trial.jpg)
+
+이전 커밋의 UC-7 sequence diagram.
+
+![trial_UC7](diagram/UC-7_stop_alarm_sequence_trial.jpg)
 
 </details>
