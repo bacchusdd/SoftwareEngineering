@@ -19,22 +19,13 @@
 </details>
 
 <details>
-<summary>UC-9 DetectMotion class diagram</summary>
+<summary>UC-9 DetectMotion & UC-10 TakePhoto & UC-11 SendAlert class diagram</summary>
 </br>
+
+![class_UC_7](diagram/motiondetection_classdiagram.png)
 
 </details>
 
-<details>
-<summary>UC-10 TakePhoto class diagram</summary>
-</br>
-
-</details>
-
-<details>
-<summary>UC-11 SendAlert class diagram</summary>
-</br>
-
-</details>
 
 ## Sequence diagrams
 
