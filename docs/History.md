@@ -12,7 +12,7 @@
 
 
 <details>
-<summary>sequence diagram trials</summary>
+<summary>class diagram trials</summary>
 </br>
 
 ![class_diagram_trial](diagram/history_class_trial.jpg)
