@@ -1,5 +1,5 @@
 from flask import Flask
-from .DB_handler import DBModule
+from DB_handler import DBModule
 
 app = Flask(__name__)
 db = DBModule()
