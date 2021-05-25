@@ -1,0 +1,7 @@
+black==20.8b1
+Flask==2.0.1
+jsonify
+pylint==2.6.0
+pylint-flask
+pyrebase
+requests==2.25.1
