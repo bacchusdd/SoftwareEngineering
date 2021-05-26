@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">MotionDetectionAlert</string>
+    <string name="join">Join</string>
+    <string name="main_title1">Motion Detection</string>
+    <string name="main_title2">Alert</string>
+    <string name="autologin">자동로그인</string>
+    <string name="edittext_id">Id</string>
+    <string name="edittext_password">Password</string>
+    <string name="login">Login</string>
 </resources>
