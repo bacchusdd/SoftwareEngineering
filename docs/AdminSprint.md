@@ -46,6 +46,6 @@
 
 주휘
 
-1.
-2.
-3.
+1. 없음 (26일)
+2. setup a development environment
+3. activity - xml (loginsetting, register)
