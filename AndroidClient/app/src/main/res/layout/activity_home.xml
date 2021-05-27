@@ -6,6 +6,81 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/TextView_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edittext_id"
+            android:textSize="20dp"
+            android:layout_margin="30dp"/>
+
+        <Button
+            android:id="@+id/Button_start"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/button_pink"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp"
+            android:text="@string/start"
+            android:textSize="40dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="80dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:src="@drawable/gallery"
+                android:layout_marginRight="5dp"/>
+
+            <Button
+                android:id="@+id/Button_gallery"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:background="@drawable/button_red"
+                android:layout_gravity="center"
+                android:text="@string/gallery"
+                android:textSize="20dp"
+                android:textColor="@android:color/white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:src="@drawable/setting"
+                android:layout_marginRight="5dp"/>
+
+            <Button
+                android:id="@+id/Button_setting"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:background="@drawable/button_red"
+                android:layout_gravity="center"
+                android:text="@string/setting"
+                android:textSize="20dp"
+                android:textColor="@android:color/white"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

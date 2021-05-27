@@ -6,6 +6,96 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="left"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp">
+
+            <Button
+                android:id="@+id/Button_backspace"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/backspace"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting"
+                android:textSize="40dp"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"/>
+
+        <Button
+            android:id="@+id/Button_login_setting"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/login_setting"
+            android:textSize="20dp"
+            android:gravity="start"
+            android:paddingTop="10dp"
+            android:background="@null"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"/>
+
+        <Button
+            android:id="@+id/Button_alert_setting"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/alert_setting"
+            android:textSize="20dp"
+            android:gravity="start"
+            android:paddingTop="10dp"
+            android:background="@null"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"/>
+
+        <Button
+            android:id="@+id/Button_camera_setting"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/camera_setting"
+            android:textSize="20dp"
+            android:gravity="start"
+            android:paddingTop="10dp"
+            android:background="@null"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"/>
+
+        <Button
+            android:id="@+id/Button_timer_setting"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/timer_setting"
+            android:textSize="20dp"
+            android:gravity="start"
+            android:paddingTop="10dp"
+            android:background="@null"/>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

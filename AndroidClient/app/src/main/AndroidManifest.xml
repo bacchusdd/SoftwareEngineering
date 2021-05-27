@@ -26,6 +26,9 @@
         <activity android:name=".SettingActivity">
 
         </activity>
+        <activity android:name=".LoginSettingActivity">
+
+        </activity>
     </application>
 
 </manifest>

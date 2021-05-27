@@ -41,6 +41,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String id = EditText_id.getText().toString();
                 String password = EditText_password.getText().toString();
+
+                // send id,password to server, and get answer
+                // if answer if true, move to HomeActivity
+                Intent intent = new Intent(MainActivity.this,HomeActivity.class);
+                intent.putExtra("id",id);
+                intent.putExtra("password",password);
+                startActivity(intent);
             }
         });
     }

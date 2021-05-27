@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="end"
-            android:background="@drawable/button_pink"
+            android:background="@drawable/button_red"
             android:text="@string/join"
             android:textSize="17dp"
             android:layout_margin="10dp"/>
@@ -35,13 +35,15 @@
                 android:layout_gravity="center"
                 android:text="@string/main_title1"
                 android:textSize="30dp"
-                android:layout_marginTop="60dp"/>
+                android:layout_marginTop="60dp"
+                android:textColor="@android:color/black"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/main_title2"
-                android:textSize="30dp"/>
+                android:textSize="30dp"
+                android:textColor="@android:color/black"/>
 
             <ImageView
                 android:layout_width="150dp"
@@ -51,13 +53,26 @@
                 android:src="@drawable/logo"
                 android:layout_marginTop="20dp"/>
 
-            <CheckBox
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/autologin"
-                android:textSize="17dp"
-                android:layout_marginBottom="10dp"/>
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/checkbox"
+                    android:textSize="17dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/autologin"
+                    android:textSize="17dp"
+                    android:layout_marginLeft="10dp"/>
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -115,7 +130,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:background="@drawable/button_pink"
+                android:background="@drawable/button_red"
                 android:text="@string/login"
                 android:textSize="17dp"/>
 
