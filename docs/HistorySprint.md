@@ -34,10 +34,10 @@
 
 1. 안했음
 2. 서버 측 함수 인터페이스 구축
-3. Gallery, ViewPhoto, GalleryDate, GalleryPhotoList class와 layout 생성, 필요한 함수
+3. 
 
 유경
 1. git 연동에 대한 검색과 시도?
 2. 클라이언트 측 함수 인터페이스 구축
-   : 
+   : Gallery, ViewPhoto, GalleryDate, GalleryPhotoList class와 layout 생성, 필요한 함수
 3. Gallery class를 controller로 두면 되는 걸까? 에 대한 고민..
