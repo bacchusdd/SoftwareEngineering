@@ -55,7 +55,7 @@
 상엽
 
 1. Home, Setting Activity implementation
-2. appserver implementation (part)
+2. Implement communication between client and server.
 3. X
 
 주휘
