@@ -64,5 +64,5 @@
 1. 클라이언트 함수 인터페이스 구축
 2. 클라이언트 : gallery를 시작화면으로 설정, back button과 datelist를 위한  recyclerview 생성, db data 구조 정리?
 3. flask와 nosql의 길은 멀고도 험하다? 
-   ![image](image/캡쳐.PNG)
+   ![image](image/historysprint1.PNG)
    맞게 이해한 건지 잘 모르겠다 :(
