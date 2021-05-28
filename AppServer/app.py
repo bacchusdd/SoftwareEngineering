@@ -13,9 +13,9 @@ def login():
     u_id = request.args.get("id")
     u_pw = request.args.get("pw")
     if u_id == "abc" and u_pw == "123":
-        return jsonify({'success': True}), 201
+        return jsonify({"isSuccess": True,"id": "abc","password": "123","name": "test","email": "test"}), 201
     else:
-        return jsonify({"about": "Hello AppServer!"})
+        return jsonify({"isSuccess": False}), 201
 
 
 if __name__ == "__main__":

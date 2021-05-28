@@ -20,6 +20,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -59,9 +60,13 @@ public class MainActivity extends AppCompatActivity {
                 String id = EditText_id.getText().toString();
                 String password = EditText_password.getText().toString();
 
-                // need server url
-                String url = "SERVER_URL?id="+id+"&pw="+password;
+                String url = "http://XXXXXXXX:5000/login?id="+id+"&pw="+password;
                 new HttpAsyncTask().execute(url);
+                try {
+                    TimeUnit.SECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 if (result == "success") {
                     Intent intent = new Intent(MainActivity.this,HomeActivity.class);
                     intent.putExtra("id",u.getId());
