@@ -12,8 +12,20 @@ def hello_world():
 def login():
     u_id = request.args.get("id")
     u_pw = request.args.get("pw")
-    if u_id == "abc" and u_pw == "123":
-        return jsonify({"isSuccess": True,"id": "abc","password": "123","name": "test","email": "test"}), 201
+    u = db.login(u_id, u_pw)
+    if u:
+        return jsonify({"isSuccess": True, "id": u["id"], "password": u["password"], "name": u["name"], "email": u["email"]}), 201
+    else:
+        return jsonify({"isSuccess": False}), 201
+
+@app.route("/signup", methods=["GET"])
+def signup():
+    u_id = request.args.get("id")
+    u_pw = request.args.get("pw")
+    u_name = request.args.get("name")
+    u_email = request.args.get("email")
+    if db.signup(u_id, u_pw, u_name, u_email):
+        return jsonify({"isSuccess": True, "id": u_id, "password": u_pw, "name": u_name, "email": u_email}), 201
     else:
         return jsonify({"isSuccess": False}), 201
 
