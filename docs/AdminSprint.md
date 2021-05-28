@@ -49,3 +49,17 @@
 1. 없음 (26일)
 2. setup a development environment
 3. activity - xml (loginsetting, register)
+
+### 2021-05-28 Thu
+
+상엽
+
+1. Home, Setting Activity implementation
+2. appserver implementation (part)
+3. X
+
+주휘
+
+1.
+2.
+3.
