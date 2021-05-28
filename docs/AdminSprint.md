@@ -60,6 +60,6 @@
 
 주휘
 
-1.
-2.
-3.
+1. setup a development environment
+2. Register Activity implementation
+3. 서버 단에서 response.body()에 status 변수 추가, 설정
