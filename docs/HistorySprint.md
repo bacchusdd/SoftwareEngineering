@@ -42,7 +42,9 @@
 2. 서버 측 함수 인터페이스 구축
 3. 서버와 데이터베이스 연결이 어렵다
 
+
 유경
+
 1. git 연동에 대한 검색과 시도?
 2. 클라이언트 측 함수 인터페이스 구축
    : Gallery, ViewPhoto, GalleryDate, GalleryPhotoList class와 layout 생성, 필요한 함수
@@ -55,3 +57,10 @@
 1. 서버 함수 인터페이스 구축
 2. db 데이터구조 및 서버에서 db 데이터 불러오기 및 삭제
 3. 이미지는 어떻게 처리하나?
+
+
+유경
+
+1. 클라이언트 함수 인터페이스 구축
+2. 클라이언트 : gallery를 시작화면으로 설정, back button과 datelist를 위한  recyclerview 생성, db data 구조 정리?
+3. flask와 nosql의 길은 멀고도 험하다? :(
