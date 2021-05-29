@@ -15,6 +15,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -22,11 +23,12 @@ import okhttp3.Response;
 
 public class RegisterActivity extends AppCompatActivity {
 
+    User u;
     EditText EditText_newid, EditText_newpw, EditText_pwcheck;
     Button Button_back2main, Button_idcheck, Button_register;
     AlertDialog dialog;
     boolean validate = false;
-    boolean isIdAlreadyTaken, isSuccess;
+    boolean isIdAlreadyTaken, isSuccess; // boolean (o) Boolean (x)
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,9 @@ public class RegisterActivity extends AppCompatActivity {
         EditText_newid = findViewById(R.id.EditText_newid);
         EditText_newpw = findViewById(R.id.EditText_newpw);
         EditText_pwcheck = findViewById(R.id.EditText_pwcheck);
+        Button_back2main = findViewById(R.id.Button_back2main);
+        Button_idcheck = findViewById(R.id.Button_idcheck);
+        Button_register = findViewById(R.id.Button_register);
 
         Button_back2main.setClickable(true);
         Button_back2main.setOnClickListener(new View.OnClickListener() {
@@ -65,8 +70,11 @@ public class RegisterActivity extends AppCompatActivity {
 
                 String url = "http://XXXXXXXX:5000/registercheck?id=" + newid;
                 new SearchForNewID().execute(url);
-
-                // try - catch?
+                try {
+                    TimeUnit.SECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
                 if (!isIdAlreadyTaken) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
@@ -75,7 +83,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                     EditText_newid.setEnabled(false);
                     validate = true;
-                    // check button?
+
                 } else {
                     AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
                     dialog = builder.setMessage("This ID is already being used.").setPositiveButton("ok", null).create();
@@ -107,7 +115,7 @@ public class RegisterActivity extends AppCompatActivity {
                     return;
                 }
 
-                if (newpw != pwcheck) {
+                if (!(newpw.equals(pwcheck))) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
                     dialog = builder.setMessage("Passwords are not same.").setNegativeButton("ok", null).create();
                     dialog.show();
@@ -116,9 +124,16 @@ public class RegisterActivity extends AppCompatActivity {
 
                 String url = "http://XXXXXXXX:5000/register?id=" + newid + "&pw=" + newpw;
                 new RegisterNewIdAndPw().execute(url);
+                try {
+                    TimeUnit.SECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
                 if (isSuccess) {
-                    Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                    Intent intent = new Intent(RegisterActivity.this, HomeActivity.class);
+                    intent.putExtra("id",u.getId());
+                    intent.putExtra("password",u.getPassword());
                     startActivity(intent);
                 }
             }
@@ -139,19 +154,20 @@ public class RegisterActivity extends AppCompatActivity {
                         .build();
                 Response response = client.newCall(request).execute();
 
-                if (response.body().status == 400) { // registercheck? response.body().status 400 : is already taken, 200 : no id in DB
+                JSONObject jsonObject = new JSONObject(response.body().string());
+                Integer status = jsonObject.getInt("status");
+
+                if (status == 400) { // status 400 : is already taken, 200 : no id in DB
                     isIdAlreadyTaken = true;
-                } else { // response.body().status == 200
+                } else { // status == 200
                     isIdAlreadyTaken = false;
                 }
 
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (JSONException e) {
+            } catch (IOException | JSONException e) {
                 e.printStackTrace();
             }
 
-            return isIdAlreadyTaken; // global variable?
+            return isIdAlreadyTaken;
 
             // onPostExecute() ?
         }
@@ -170,13 +186,20 @@ public class RegisterActivity extends AppCompatActivity {
                         .build();
                 Response response = client.newCall(request).execute();
 
-                if (response.body().status == 200) { // register? response.body().status 400 : fail, 200 : success
+                JSONObject jsonObject = new JSONObject(response.body().string());
+                Integer status = jsonObject.getInt("status");
+
+                String id, pw;
+                if (status == 200) { // status 400 : fail, 200 : success
+                    id = jsonObject.getString("id");
+                    pw = jsonObject.getString("password");
+                    u = new User(id, pw);
                     isSuccess = true;
-                } else {
+                } else { // status == 400
                     isSuccess = false;
                 }
 
-            } catch (IOException e) {
+            } catch (IOException | JSONException e) {
                 e.printStackTrace();
             }
 

@@ -21,19 +21,20 @@ def login():
 @app.route("/registercheck", methods=["GET"])
 def register_check():
     u_id = request.args.get("id")
+    
     if db.register_verification(u_id):
-        return jsonify({"isSuccess": True, "id": u_id, "password": u_pw}), 200
+        return jsonify({"status": 200}) # id pw not needed
     else:
-        return jsonify({"isSuccess": False}), 400
+        return jsonify({"status": 400})
 
 @app.route("/register", methods=["GET"])
 def register():
     u_id = request.args.get("id")
     u_pw = request.args.get("pw")
     if db.register(u_id, u_pw):
-        return jsonify({"isSuccess": True, "id": u_id, "password": u_pw}), 200
+        return jsonify({"status": 200, "id": u_id, "password": u_pw})
     else:
-        return jsonify({"isSuccess": False}), 400
+        return jsonify({"status": 400})
 
 @app.route("/changepw", methods=["GET"])
 def change_password():

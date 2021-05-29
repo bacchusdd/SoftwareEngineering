@@ -20,13 +20,13 @@
                 android:id="@+id/Button_back2main"
                 android:layout_width="78dp"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="BACK" />
 
             <TextView
                 android:id="@+id/textView10"
                 android:layout_width="332dp"
                 android:layout_height="34dp"
-                android:text="TextView" />
+                android:text="Join" />
 
         </LinearLayout>
 
@@ -42,27 +42,33 @@
 
                 <ImageView
                     android:id="@+id/imageView5"
-                    android:layout_width="105dp"
+                    android:layout_width="87dp"
                     android:layout_height="45dp"
                     android:layout_weight="1"
                     android:background="@null"
                     android:src="@drawable/user" />
 
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="61dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ID" />
+
                 <EditText
                     android:id="@+id/EditText_newid"
-                    android:layout_width="wrap_content"
+                    android:layout_width="169dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="ID" />
+                    android:inputType="textPersonName" />
 
                 <Button
                     android:id="@+id/Button_idcheck"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Button" />
+                    android:text="Check" />
             </LinearLayout>
 
             <LinearLayout
@@ -73,12 +79,19 @@
 
                 <ImageView
                     android:id="@+id/imageView6"
-                    android:layout_width="15dp"
+                    android:layout_width="36dp"
                     android:layout_height="45dp"
                     android:layout_weight="1"
                     android:background="@null"
                     android:padding="5dp"
                     android:src="@drawable/key" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="11dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="PW" />
 
                 <EditText
                     android:id="@+id/EditText_newpw"
@@ -86,8 +99,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:inputType="textPassword"
-                    android:text="Password" />
+                    android:inputType="textPassword" />
 
             </LinearLayout>
 
@@ -99,12 +111,19 @@
 
                 <ImageView
                     android:id="@+id/imageView7"
-                    android:layout_width="15dp"
+                    android:layout_width="37dp"
                     android:layout_height="45dp"
                     android:layout_weight="1"
                     android:background="@null"
                     android:padding="5dp"
                     android:src="@drawable/key" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="again" />
 
                 <EditText
                     android:id="@+id/EditText_pwcheck"
@@ -112,8 +131,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:inputType="textPassword"
-                    android:text="Password" />
+                    android:inputType="textPassword" />
 
             </LinearLayout>
 
@@ -122,7 +140,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="Register" />
 
         </LinearLayout>
 

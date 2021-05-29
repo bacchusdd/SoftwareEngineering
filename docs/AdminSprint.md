@@ -74,6 +74,6 @@
 
 주휘
 
-1.
-2.
-3.
+1. Register Activity implementation
+2. Debugged Register Activity and view, Checked and Modified communication between client and server
+3. DB handler methods
