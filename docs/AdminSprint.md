@@ -50,12 +50,12 @@
 2. setup a development environment
 3. activity - xml (loginsetting, register)
 
-### 2021-05-28 Thu
+### 2021-05-28 FRI
 
 상엽
 
 1. Home, Setting Activity implementation
-2. Implement communication between client and server.
+2. Implement communication between client and server
 3. X
 
 주휘
@@ -63,3 +63,17 @@
 1. setup a development environment
 2. Register Activity implementation
 3. 서버 단에서 response.body()에 status 변수 추가, 설정
+
+### 2021-05-29 SAT
+
+상엽
+
+1. Implement communication between client and server
+2. Implement communication between server and database, and change_password()
+3. X
+
+주휘
+
+1.
+2.
+3.
