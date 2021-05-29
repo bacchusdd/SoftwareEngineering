@@ -20,20 +20,18 @@ class DBModule:
         except:
             return False
 
-    def signup(self, u_id, u_pw, u_name, u_email):
+    def register(self, u_id, u_pw):
         information = {
             "id": u_id,
-            "password": u_pw,
-            "name": u_name,
-            "email": u_email
+            "password": u_pw
         }
-        if self.signup_verification(u_id):
+        if self.register_verification(u_id):
             self.db.child("userlist").child(u_id).set(information)
             return True
         else:
             return False
 
-    def signup_verification(self, u_id):
+    def register_verification(self, u_id):
         userlist = self.db.child("userlist").get().val()
         for i in userlist:
             if u_id == i:

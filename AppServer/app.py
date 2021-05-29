@@ -14,20 +14,26 @@ def login():
     u_pw = request.args.get("pw")
     u = db.login(u_id, u_pw)
     if u:
-        return jsonify({"isSuccess": True, "id": u["id"], "password": u["password"], "name": u["name"], "email": u["email"]}), 201
+        return jsonify({"isSuccess": True, "id": u["id"], "password": u["password"]}), 200
     else:
-        return jsonify({"isSuccess": False}), 201
+        return jsonify({"isSuccess": False}), 200
 
-@app.route("/signup", methods=["GET"])
-def signup():
+@app.route("/registercheck", methods=["GET"])
+def register_check():
+    u_id = request.args.get("id")
+    if db.signup(u_id, u_pw):
+        return jsonify({"isSuccess": True, "id": u_id, "password": u_pw}), 200
+    else:
+        return jsonify({"isSuccess": False}), 400
+
+@app.route("/register", methods=["GET"])
+def register():
     u_id = request.args.get("id")
     u_pw = request.args.get("pw")
-    u_name = request.args.get("name")
-    u_email = request.args.get("email")
-    if db.signup(u_id, u_pw, u_name, u_email):
-        return jsonify({"isSuccess": True, "id": u_id, "password": u_pw, "name": u_name, "email": u_email}), 201
+    if db.register(u_id, u_pw):
+        return jsonify({"isSuccess": True, "id": u_id, "password": u_pw}), 200
     else:
-        return jsonify({"isSuccess": False}), 201
+        return jsonify({"isSuccess": False}), 400
 
 
 if __name__ == "__main__":
