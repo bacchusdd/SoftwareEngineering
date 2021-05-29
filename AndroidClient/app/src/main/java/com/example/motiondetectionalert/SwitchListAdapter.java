@@ -1,6 +1,7 @@
 package com.example.motiondetectionalert;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,6 +41,13 @@ public class SwitchListAdapter extends BaseAdapter {
         View view = layoutInflater.inflate(R.layout.activity_gallery_date, null);
         Switch switchView = view.findViewById(R.id.switch_date);
         switchView.setText(this.date.get(0));
+        switchView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context.getApplicationContext(), GalleryPhotoList.class);
+                context.startActivity(intent);
+            }
+        });
         return view;
     }
 }
