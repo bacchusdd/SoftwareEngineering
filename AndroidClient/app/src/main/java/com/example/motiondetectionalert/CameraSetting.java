@@ -48,7 +48,7 @@ public class CameraSetting {
     }
 
     public void startCamera() {
-        ListenableFuture<ProcessCameraProvider> cameraProviderFuture = ProcessCameraProvider.getInstance(mainContext);
+        final ListenableFuture<ProcessCameraProvider> cameraProviderFuture = ProcessCameraProvider.getInstance(mainContext);
 
         cameraProviderFuture.addListener(new Runnable() {
             @Override
@@ -84,7 +84,7 @@ public class CameraSetting {
 
         // 타임스탬프 출력파일 만들기
         String FILENAME_FORMAT = "yyyy-MM-dd-HH-mm-ss-SSS";
-        File photoFile = new File(outputDirectory, new SimpleDateFormat(FILENAME_FORMAT, Locale.US).format(System.currentTimeMillis()) + ".png");
+        final File photoFile = new File(outputDirectory, new SimpleDateFormat(FILENAME_FORMAT, Locale.US).format(System.currentTimeMillis()) + ".png");
         // 파일과 함께 저장될 메타데이터가 들어갈 옵션 객체 생성
         ImageCapture.OutputFileOptions outputOptions = new ImageCapture.OutputFileOptions.Builder(photoFile).build();
 
