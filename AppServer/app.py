@@ -21,7 +21,7 @@ def login():
 @app.route("/registercheck", methods=["GET"])
 def register_check():
     u_id = request.args.get("id")
-    if db.signup(u_id, u_pw):
+    if db.register_verification(u_id):
         return jsonify({"isSuccess": True, "id": u_id, "password": u_pw}), 200
     else:
         return jsonify({"isSuccess": False}), 400

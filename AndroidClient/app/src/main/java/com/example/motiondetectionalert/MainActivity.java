@@ -60,19 +60,17 @@ public class MainActivity extends AppCompatActivity {
                 String id = EditText_id.getText().toString();
                 String password = EditText_password.getText().toString();
 
-                String url = "http://XXXXXXXX:5000/login?id="+id+"&pw="+password;
+                String url = "http://SERVER_IP:5000/login?id="+id+"&pw="+password;
                 new HttpAsyncTask().execute(url);
                 try {
                     TimeUnit.SECONDS.sleep(1);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                if (result == "success") {
+                if (result.equals("success")) {
                     Intent intent = new Intent(MainActivity.this,HomeActivity.class);
                     intent.putExtra("id",u.getId());
                     intent.putExtra("password",u.getPassword());
-                    intent.putExtra("name",u.getName());
-                    intent.putExtra("email",u.getEmail());
                     startActivity(intent);
                 }
                 else {
@@ -102,13 +100,11 @@ public class MainActivity extends AppCompatActivity {
 
                 JSONObject jsonObject = new JSONObject(response.body().string());
                 Boolean isSuccess = jsonObject.getBoolean("isSuccess");
-                String id, pw, name, email;
+                String id, pw;
                 if (isSuccess) {
                     id = jsonObject.getString("id");
                     pw = jsonObject.getString("password");
-                    name = jsonObject.getString("name");
-                    email = jsonObject.getString("email");
-                    u = new User(id, pw, name, email);
+                    u = new User(id, pw);
                     result = "success";
                 }
                 else {
