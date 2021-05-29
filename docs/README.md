@@ -42,5 +42,5 @@ Records of our team meetings.
 
 ## Sprint Documents
 [Detection Sprint](DetectionSprint.md)
-[Admin Sprint](AdminSprint.md)
-[History Sprint](HistorySprint.md)
+![Admin Sprint](AdminSprint.md)
+![History Sprint](HistorySprint.md)
