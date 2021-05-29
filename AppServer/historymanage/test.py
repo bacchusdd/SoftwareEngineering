@@ -14,5 +14,5 @@ config = {
 firebase = pyrebase.initialize_app(config)
 firemain = firebase.database()
 
-
+//update : 값 생성
 firemain.child("photolist").child("kang").child("dates").child("date").child("2021-05-29").child("urls").update({"photo_url":"gs://motion-detection-app-39b9b.appspot.com/ex1.jpg"})
