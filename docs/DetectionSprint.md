@@ -37,7 +37,7 @@
 
 1. 어젠 뭘 하셨나요?
 2. 오늘은 뭘 하실건가요?
-3. is anything in your way?
+3. Is anything in your way?
 
 ### 2021-05-27 Thu
 

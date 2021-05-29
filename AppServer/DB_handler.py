@@ -1,3 +1,4 @@
+from PIL import Image
 import pyrebase
 import json
 
@@ -13,6 +14,10 @@ class DBModule:
         pass
 
     def signup(self, id, pwd, name, email):
+        pass
+
+    def save_photo(self, image: Image):
+        # upload photo object to to DB
         pass
 
     # DB functions...

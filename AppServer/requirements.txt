@@ -4,4 +4,5 @@ jsonify
 pylint
 pylint-flask
 pyrebase4
+pillow
 requests
