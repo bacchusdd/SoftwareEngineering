@@ -41,6 +41,6 @@ Documentation about domain analysis
 Records of our team meetings.
 
 ## Sprint Documents
-[Detection Sprint](DetectionSprint.md)
-![Admin Sprint](AdminSprint.md)
-![History Sprint](HistorySprint.md)
+- [Detection Sprint](DetectionSprint.md)
+- [Admin Sprint](AdminSprint.md)
+- [History Sprint](HistorySprint.md)
