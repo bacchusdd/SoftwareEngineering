@@ -22,6 +22,7 @@ public class MotionDetector {
 
     public void startMonitoring() {
         Log.d("startMonitoring", "monitoring start");
+        cameraSetting.startCamera();
         startTimer();
         isMonitoring = true;
     }
