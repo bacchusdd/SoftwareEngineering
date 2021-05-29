@@ -7,3 +7,7 @@ public interface DetectionAPI {
     @GET("/movie.json")
     Call<String> getMovieList();
 }
+
+//public interface AlertAPI{
+//
+//}

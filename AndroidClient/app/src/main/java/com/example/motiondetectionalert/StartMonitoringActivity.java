@@ -41,6 +41,8 @@ public class StartMonitoringActivity extends AppCompatActivity {
                 startMonitoring();
                 Intent clientMonitoringIntent = new Intent(getApplicationContext(), ClientMonitoringActivity.class);
 //                postRequest("your message here", url);
+
+                // If connection successful
                 startActivity(clientMonitoringIntent); //Move Scene
             }
         });
