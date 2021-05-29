@@ -69,7 +69,7 @@
 상엽
 
 1. Implement communication between client and server
-2. Implement communication between server and database, and change_password()
+2. Implement communication between server and database, change_password(), and delete_account().
 3. X
 
 주휘
