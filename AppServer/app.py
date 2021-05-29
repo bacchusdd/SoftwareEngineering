@@ -35,6 +35,22 @@ def register():
     else:
         return jsonify({"isSuccess": False}), 400
 
+@app.route("/changepw", methods=["GET"])
+def change_password():
+    u_id = request.args.get("id")
+    u_pw = request.args.get("pw")
+    if db.change_password(u_id, u_pw):
+        return jsonify({"isSuccess": True, "id": u_id, "password": u_pw}), 200
+    else:
+        return jsonify({"isSuccess": False}), 400
+
+@app.route("/deleteaccount", methods=["GET"])
+def delete_account():
+    u_id = request.args.get("id")
+    if db.delete_account(u_id):
+        return jsonify({"isSuccess": True}), 200
+    else:
+        return jsonify({"isSuccess": False}), 400
 
 if __name__ == "__main__":
     app.run(debug=True)

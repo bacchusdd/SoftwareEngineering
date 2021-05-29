@@ -117,13 +117,5 @@ public class MainActivity extends AppCompatActivity {
             }
             return result;
         }
-
-        @Override
-        protected void onPostExecute(String s) {
-            super.onPostExecute(s);
-            if (s != null) {
-                Log.d("Network", s);
-            }
-        }
     }
 }

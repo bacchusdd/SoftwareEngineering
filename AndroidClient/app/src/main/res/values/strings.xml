@@ -15,4 +15,10 @@
     <string name="alert_setting">알림 설정</string>
     <string name="camera_setting">카메라 설정</string>
     <string name="timer_setting">타이머 설정</string>
+    <string name="loginsetting">로그인 설정</string>
+    <string name="changepassword">비밀번호 변경</string>
+    <string name="change">변경하기</string>
+    <string name="newpw">새 비밀번호 입력</string>
+    <string name="newpwcheck">새 비밀번호 입력 확인</string>
+    <string name="deleteaccount">회원 탈퇴</string>
 </resources>
