@@ -15,10 +15,10 @@ android:orientation="horizontal"
 android:layout_width="match_parent"
 android:layout_height="match_parent">
 
-    <Switch
-        android:id="@+id/switch_date"
+    <Button
+        android:id="@+id/button_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-    </Switch>
+    </Button>
 </LinearLayout>

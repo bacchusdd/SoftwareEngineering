@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.Toast;
@@ -39,9 +40,9 @@ public class SwitchListAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = layoutInflater.inflate(R.layout.activity_gallery_date, null);
-        Switch switchView = view.findViewById(R.id.switch_date);
-        switchView.setText(this.date.get(position));
-        switchView.setOnClickListener(new View.OnClickListener() {
+        Button buttonView = view.findViewById(R.id.button_date);
+        buttonView.setText(this.date.get(position));
+        buttonView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context.getApplicationContext(), GalleryPhotoList.class);
