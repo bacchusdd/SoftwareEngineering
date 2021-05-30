@@ -9,7 +9,7 @@ import java.util.TimerTask;
 import java.util.concurrent.Semaphore;
 
 public class MotionDetector {
-    private final double differenceThreshold = 0.1;
+    private final double differenceThreshold = 3;
     private final CameraSetting cameraSetting;
 
     private Timer imageCaptureTimer;
@@ -79,8 +79,8 @@ public class MotionDetector {
             }
         };
 
-        imageCaptureTimer.schedule(imageCaptureTimerTask, 4000, 4000);
-        endMonitoringTimer.schedule(endMonitoringTimerTask, 1000 * 3600);
+        imageCaptureTimer.schedule(imageCaptureTimerTask, 1500, 1500);
+        endMonitoringTimer.schedule(endMonitoringTimerTask, 1000 * 3600 * 4);
     }
 
     private void stopTimer() {
@@ -106,8 +106,8 @@ public class MotionDetector {
         // 만약 차이가 differenceThreshold 보다 크면 움직임 감지
         if (difference > differenceThreshold) {
             // 움직임 감지 이벤트
-            notifier.sendAlert();
             stopMonitoring();
+//            notifier.sendAlert();
             Log.d("detectMotion", "motion detected!");
         }
         else {
