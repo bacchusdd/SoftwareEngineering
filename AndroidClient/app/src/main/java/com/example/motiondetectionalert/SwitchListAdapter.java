@@ -45,6 +45,7 @@ public class SwitchListAdapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context.getApplicationContext(), GalleryPhotoList.class);
+                intent.putExtra("date", date.get(position));
                 context.startActivity(intent);
             }
         });
