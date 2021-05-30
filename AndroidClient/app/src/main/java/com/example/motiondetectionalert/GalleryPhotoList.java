@@ -17,10 +17,18 @@ import com.bumptech.glide.Glide;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
@@ -37,7 +45,8 @@ public class GalleryPhotoList extends AppCompatActivity {
     private TextView textView;
     private String TAG;
     //private static final String url = "http://192.168.0.166:3306/";
-    ArrayList<String> list = new ArrayList<>();
+    //ArrayList<String> list = new ArrayList<>();
+    HashMap<String, String> list;
     int count;
     String result;
 
@@ -50,9 +59,21 @@ public class GalleryPhotoList extends AppCompatActivity {
         user_id = "kang";
         date = intent.getStringExtra("date");
 
-        System.out.println("user_id & date : " + user_id + "/" + date);
-
-
+        while (true) {
+            try {
+                URL server = new URL(String.format("http://10.0.2.2:5000/history/%s/%s", user_id, date));
+                HttpURLConnection httpconnection = (HttpURLConnection) server.openConnection();
+                BufferedReader in = new BufferedReader(new InputStreamReader(httpconnection.getInputStream()));
+                JSONParser jsonParser = new JSONParser();
+                JSONObject jsonObj = (org.json.simple.JSONObject) jsonParser.parse(in);
+                list = (HashMap<String, String>)jsonObj;
+                break;
+            } catch (Exception e) {
+                System.out.println(e);
+                continue;
+            }
+        }
+/*
         String url = "http://10.0.2.2:5000/photolist?user_id=" + user_id + "&date=" + date;
         System.out.println(url);
 
@@ -65,7 +86,7 @@ public class GalleryPhotoList extends AppCompatActivity {
         }
 
         //System.out.println(result);
-
+*/
         back_btn = (ImageButton) findViewById(R.id.back_btn);
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,12 +96,12 @@ public class GalleryPhotoList extends AppCompatActivity {
         });
 
         gridView1 = findViewById(R.id.gridView1);
-        adapter = new PhotoListAdapter(list);
+        adapter = new PhotoListAdapter(list, date);
         gridView1.setAdapter(adapter);
 
 
-        int counting = list.size();
-        Log.d("test", "listsize = " + counting);
+       // int counting = list.size();
+        //Log.d("test", "listsize = " + counting);
 
 
         /*
@@ -88,7 +109,6 @@ public class GalleryPhotoList extends AppCompatActivity {
             System.out.println("url이다" + list.get(j-1));
         }
        */
-
 
 
         //TimeUnit.SECONDS.sleep(1);
@@ -135,7 +155,8 @@ public class GalleryPhotoList extends AppCompatActivity {
 
 
     }
-
+}
+/*
     private class sendData extends AsyncTask<String, Void, ArrayList<String>> {
 
         OkHttpClient client = new OkHttpClient();
@@ -158,6 +179,7 @@ public class GalleryPhotoList extends AppCompatActivity {
                         jsonInput.toString()
                 );
                 */
+    /*
                 Request request = new Request.Builder()
                         .url(params[0])
                         .build();
@@ -204,3 +226,4 @@ public class GalleryPhotoList extends AppCompatActivity {
         }
     }
 }
+*/

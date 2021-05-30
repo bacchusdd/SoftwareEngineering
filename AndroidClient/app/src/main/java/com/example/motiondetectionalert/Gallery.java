@@ -83,10 +83,10 @@ public class Gallery extends AppCompatActivity  {
         while(true) {
             try {
                 URL server = new URL("http://10.0.2.2:5000/history/" + userid);
-                HttpURLConnection httpconnection = (HttpURLConnection) server.openConnection();BufferedReader in = new BufferedReader(new InputStreamReader(httpconnection.getInputStream()));
+                HttpURLConnection httpconnection = (HttpURLConnection) server.openConnection();
+                BufferedReader in = new BufferedReader(new InputStreamReader(httpconnection.getInputStream()));
                 JSONParser jsonParser = new JSONParser();
                 JSONObject jsonObj = (JSONObject) jsonParser.parse(in);
-                Collection datel = jsonObj.values();
                 JSONObject outputJsonObj = new JSONObject();
                 JSONArray jarray = (JSONArray) jsonObj.get("date");
 
@@ -104,26 +104,5 @@ public class Gallery extends AppCompatActivity  {
     //각 날짜 누르면 db에 저장된 photo들 불러오기
     //GalleryPhotoList class 사용
     //adapter 필요
-    public void bringPhotoList(String date){
-        String userid = "kang";
-        while(true) {
-            try {
-                URL server = new URL("http://10.0.2.2:5000/history/"+ date+"/"+ userid);
-                HttpURLConnection httpconnection = (HttpURLConnection) server.openConnection();BufferedReader in = new BufferedReader(new InputStreamReader(httpconnection.getInputStream()));
-                JSONParser jsonParser = new JSONParser();
-                JSONObject jsonObj = (JSONObject) jsonParser.parse(in);
-                Collection datel = jsonObj.values();
-                JSONObject outputJsonObj = new JSONObject();
-                JSONArray jarray = (JSONArray) jsonObj.get(date);
-/*
-                for (int i = 0; i <jarray.size(); i++){
-                    datefromdb.add((String)jarray.get(i));
-                }*/
-                break;
-            }catch(Exception e){
-                System.out.println(e);
-                continue;
-            }
-        }
-    }
+
 }
