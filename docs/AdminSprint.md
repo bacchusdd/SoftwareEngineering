@@ -77,3 +77,17 @@
 1. Register Activity implementation
 2. Debugged Register Activity and view, Checked and Modified communication between client and server
 3. DB handler methods
+
+### 2021-05-30 SUN
+
+상엽
+
+1. Implement communication between server and database, change_password(), and delete_account().
+2. Debug and fix error.
+3. numOfAttemps가 특정 횟수를 넘어섰을 때 어떻게 처리해야 할지 고민.
+
+주휘
+
+1. Debugged Register Activity and view, Checked and Modified communication between client and server
+2.
+3.
