@@ -40,7 +40,7 @@ public class SwitchListAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = layoutInflater.inflate(R.layout.activity_gallery_date, null);
         Switch switchView = view.findViewById(R.id.switch_date);
-        switchView.setText(this.date.get(0));
+        switchView.setText(this.date.get(position));
         switchView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
