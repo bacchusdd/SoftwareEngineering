@@ -1,8 +1,6 @@
-from flask import Flask
+from flask import Flask, render_template
 from historymanage.DB_history import History
 
-app = Flask(__name__)
-history = History()
 
 class Action:
     def __init__(self):
@@ -10,6 +8,7 @@ class Action:
 
     def selecthistory(self, user_id, date):
         photo = history.getPhoto(user_id, date)
+        photo = {"photo": photo}
         return photo
 
     def deletehistory(self, user_id, date, photo_id):
@@ -17,18 +16,26 @@ class Action:
 
     def selectdate(self, user_id):
         date = history.getDate(user_id)
+        date = {"date": date}
         return date
+
+app = Flask(__name__)
+history = History()
+action = Action()
+
+@app.route("/history/<user_id>/<date>")
+def accessphotos(user_id, date):
+    photos = action.selecthistory(user_id, date)
+    return photos
+
+@app.route("/history/<user_id>")
+def accesshistory(user_id):
+    date = action.selectdate(user_id)
+    return date
 
 @app.route("/")
 def useraction():
-    # user에게 action과 filename을 받는다
-    # 받은 action을 처리
-    action = Action()
-    #p = action.selecthistory("kang", "2021-05-26")
-    p = action.selectdate("kang")
-    return p
-
-
+    return ""
 
 if __name__ == "__main__":
     app.run(debug=True)
