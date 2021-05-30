@@ -55,24 +55,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:button="@null"
-                    android:drawableLeft="@drawable/checkbox"
-                    android:textSize="17dp"
-                    android:layout_marginBottom="10dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/autologin"
-                    android:textSize="17dp"
-                    android:layout_marginLeft="10dp"/>
-
-            </LinearLayout>
+                android:layout_height="wrap_content"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

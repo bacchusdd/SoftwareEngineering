@@ -89,5 +89,5 @@
 주휘
 
 1. Debugged Register Activity and view, Checked and Modified communication between client and server
-2.
-3.
+2. Login Block (handler, runnable) Implementation
+3. What if user shut down the app?

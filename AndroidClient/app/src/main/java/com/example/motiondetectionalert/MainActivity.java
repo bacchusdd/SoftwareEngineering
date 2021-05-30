@@ -6,21 +6,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.text.Layout;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
@@ -34,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     String result;
     EditText EditText_id, EditText_password;
     Button Button_join, Button_login;
-    int numOfAttemps = 0;
+    int numOfAttempts = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,9 +72,9 @@ public class MainActivity extends AppCompatActivity {
                     AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                     dialog = builder.setMessage("Failed to login.").setNegativeButton("ok", null).create();
                     dialog.show();
-                    numOfAttemps++;
-                    if (numOfAttemps > 5) {
-                        numOfAttemps = 0;
+                    numOfAttempts++;
+                    if (numOfAttempts > 5) {
+                        numOfAttempts = 0;
                         Intent intent = new Intent(MainActivity.this,LoginBlockActivity.class);
                         startActivity(intent);
                     }
