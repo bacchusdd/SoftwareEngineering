@@ -96,5 +96,5 @@
 1. pohtolist, gridview 구현
 2. firebase-flask-android 값 받아오기, 받아온 jsonarraylist string array로 변환 후 parsing, glide 사용하여 gridview에 url 이미지로 띄우기
 3. 거북이가 틀림없다... 12시간 넘게 해도 아직 완벽하게 못하다니 :(
-   key 없는 jsonarray 값을 제대로 받아오는 게 어려웠다. jsonobject와 jsonarray 사이에서 엄청나게 헤맸다.
-   glide라는 라이브러리를 알게 되었다. 유익한 라이브러리 같다.
+3. key 없는 jsonarray 값을 제대로 받아오는 게 어려웠다. jsonobject와 jsonarray 사이에서 엄청나게 헤맸다.
+3. glide라는 라이브러리를 알게 되었다. 유익한 라이브러리 같다.
