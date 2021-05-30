@@ -8,6 +8,17 @@ class DBModule:
             config = json.load(f)
 
         self.firebase = pyrebase.initialize_app(config)
+        
+    def getPhoto(self, user_id, date):
+        photos = self.historydb.child("photolist").child(user_id).child("dates").child(date).child("urls").get()
+        photos = photos.val().values()
+        print(photos)
+        photos = tuple(photos)
+
+        if len(photos) >= 0:
+            return photos
+        else:
+            return "fail"
 
     def login(self, id, pwd):
         pass
