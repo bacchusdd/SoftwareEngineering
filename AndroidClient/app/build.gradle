@@ -55,5 +55,10 @@ dependencies {
 
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta3'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha4'
+    
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
 
+}
+configurations {
+    compile.exclude group: "junit", module: "junit"
 }
