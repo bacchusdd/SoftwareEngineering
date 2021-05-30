@@ -52,7 +52,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:hint="@string/newpw"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:background="@drawable/edittext_password"
             android:layout_marginTop="20dp"/>
 
@@ -62,7 +62,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:hint="@string/newpwcheck"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:background="@drawable/edittext_password"
             android:layout_marginTop="20dp"/>
 

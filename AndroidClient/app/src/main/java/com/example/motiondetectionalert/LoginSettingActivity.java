@@ -95,6 +95,11 @@ public class LoginSettingActivity extends AppCompatActivity {
                     return;
                 }
 
+                try {
+                    TimeUnit.SECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 Intent intent = new Intent(LoginSettingActivity.this,MainActivity.class);
                 startActivity(intent);
             }
@@ -125,6 +130,11 @@ public class LoginSettingActivity extends AppCompatActivity {
                     return;
                 }
 
+                try {
+                    TimeUnit.SECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 Intent intent = new Intent(LoginSettingActivity.this,MainActivity.class);
                 startActivity(intent);
             }

@@ -1,5 +1,6 @@
 package com.example.motiondetectionalert;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -28,6 +29,7 @@ import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
 
+    AlertDialog dialog;
     User u;
     String result;
     EditText EditText_id, EditText_password;
@@ -74,6 +76,9 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
                 else {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                    dialog = builder.setMessage("Failed to login.").setNegativeButton("ok", null).create();
+                    dialog.show();
                     numOfAttemps++;
                     if (numOfAttemps > 5) {
                         numOfAttemps = 0;

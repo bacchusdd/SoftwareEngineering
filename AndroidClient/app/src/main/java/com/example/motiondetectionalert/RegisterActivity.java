@@ -68,7 +68,7 @@ public class RegisterActivity extends AppCompatActivity {
                     return;
                 }
 
-                String url = "http://XXXXXXXX:5000/registercheck?id=" + newid;
+                String url = "http://SERVER_IP:5000/registercheck?id=" + newid;
                 new SearchForNewID().execute(url);
                 try {
                     TimeUnit.SECONDS.sleep(1);
@@ -122,7 +122,7 @@ public class RegisterActivity extends AppCompatActivity {
                     return;
                 }
 
-                String url = "http://XXXXXXXX:5000/register?id=" + newid + "&pw=" + newpw;
+                String url = "http://SERVER_IP:5000/register?id=" + newid + "&pw=" + newpw;
                 new RegisterNewIdAndPw().execute(url);
                 try {
                     TimeUnit.SECONDS.sleep(1);
