@@ -1,7 +1,7 @@
 # Aditional Explain for History Branch
 
 ## 실행 전 안내 사항
-- Admin과 연동되지 않았기 때문에, 임의로 user id를 지정함. user id는 'kang'으로 지정
+- Admin과 연동되지 않았기 때문에, 임의로 user id를 지정함. user id는 'kang'으로 지정.
 - (Server) AppServer file에서 'HistoryAction.py' 파일을 실행시킨 후 사용.
 - (Client) AndroidStudio에서 AppClient file 전체를 실행시키면 Gallery 화면부터 실행.
 
