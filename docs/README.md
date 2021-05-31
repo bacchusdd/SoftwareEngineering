@@ -41,12 +41,12 @@ Documentation about domain analysis
 Records of our team meetings.
 
 ## Aditional Documents
-# Detection
+### Detection
 - [Detection Sprint](DetectionSprint.md)
 - 
-# Admin
+### Admin
 - [Admin Sprint](AdminSprint.md)
 
-# History
+### History
 - [History Sprint](HistorySprint.md)
 - [Additional Explanation for History](HistoryExplain.md)
