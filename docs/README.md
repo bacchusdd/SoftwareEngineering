@@ -43,6 +43,7 @@ Records of our team meetings.
 ## Aditional Documents
 ### Detection
 - [Detection Sprint](DetectionSprint.md)
+- [Additional Explanation](DetectionExplain.md)
 
 ### Admin
 - [Admin Sprint](AdminSprint.md)
