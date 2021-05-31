@@ -46,6 +46,7 @@ Records of our team meetings.
 
 ### Admin
 - [Admin Sprint](AdminSprint.md)
+- [Additional Explanation](AdminExplain.md)
 
 ### History
 - [History Sprint](HistorySprint.md)
