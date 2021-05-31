@@ -18,9 +18,9 @@
 ## 실행화면
 
 - 카메라로 사용할 기기와 사용자가 원격으로 사용할 기기 각각의 시작화면 <br/>
-  ![image](image/detection_1.png)
-  ![image](image/detection_2.png)
+  ![image](image/detection_1.png =250x)
+  ![image](image/detection_2.png =250x)
 - 소켓을 통해 모니터링 시작 명령을 받으면 각각 화면이 바뀜 <br/>
-  ![image](image/detection_3.png)
-  ![image](image/detection_4.png)
+  ![image](image/detection_3.png =250x)
+  ![image](image/detection_4.png =250x)
 - 카메라 화면에서 움직임이 감지되면 사진이 서버를 거쳐 DB에 저장된다.
