@@ -40,7 +40,13 @@ Documentation about domain analysis
 ## [Meeting Records](MeetingRecords.md)
 Records of our team meetings.
 
-## Sprint Documents
+## Aditional Documents
+# Detection
 - [Detection Sprint](DetectionSprint.md)
+- 
+# Admin
 - [Admin Sprint](AdminSprint.md)
+
+# History
 - [History Sprint](HistorySprint.md)
+- [Additional Explanation for History](HistoryExplain.md)
