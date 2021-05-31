@@ -27,6 +27,7 @@ import java.text.SimpleDateFormat;
 import java.util.Locale;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Semaphore;
 
 public class CameraSetting {
     private final String TAG = "CameraXBasic";
@@ -40,13 +41,18 @@ public class CameraSetting {
     private ProcessCameraProvider cameraProvider;
 
     private Bitmap takenImageBitmap = null;
-    private Bitmap prevtakenImageBitmap = null;
+    private Bitmap prevTakenImageBitmap = null;
+    private Uri takenImageUri = null;
+    private Uri prevTakenImageUri = null;
 
-    public CameraSetting(Context context, PreviewView previewView, ExecutorService executorService) {
+    private Semaphore imageOpenLock;
+
+    public CameraSetting(Context context, PreviewView previewView, ExecutorService executorService, Semaphore imageOpenLock) {
         mainContext = context;
         viewFinder = previewView;
         cameraExecutor = executorService;
         outputDirectory = mainContext.getExternalFilesDir(null).toString();
+        this.imageOpenLock = imageOpenLock;
     }
 
     public void startCamera() {
@@ -95,16 +101,20 @@ public class CameraSetting {
             @RequiresApi(api = Build.VERSION_CODES.P)
             @Override
             public void onImageSaved(@NonNull ImageCapture.OutputFileResults outputFileResults) {
-                Uri savedUri = Uri.fromFile(photoFile);
-
+                // 이전에 찍은 사진 uri 옮기기
+                prevTakenImageUri = takenImageUri;
+                // 방금 찍은 사진에서 uri 추출
+                takenImageUri = Uri.fromFile(photoFile);
                 // 이전에 찍었던 사진을 옮기고
-                prevtakenImageBitmap = takenImageBitmap;
+                prevTakenImageBitmap = takenImageBitmap;
                 // 새로 찍은 사진을 저장
-                takenImageBitmap = getImageBitmapFromUri(savedUri);
-                // 찍은 사진 제거
-                deleteTakenImage(savedUri);
+                takenImageBitmap = getImageBitmapFromUri(takenImageUri);
+                Log.d("onImageSaved", "photo saved");
 
-                String msg = "Photo capture succeeded: " + savedUri.toString();
+                // 세마포어 릴리즈. 이제 motionDetector가 사진을 쓸 수 있게 된다.
+                imageOpenLock.release();
+
+                String msg = "Photo capture succeeded: " + takenImageUri.toString();
 //                Toast.makeText(mainContext, msg, Toast.LENGTH_SHORT).show();
                 Log.d(TAG, msg);
             }
@@ -128,7 +138,7 @@ public class CameraSetting {
         return bitmap;
     }
 
-    private void deleteTakenImage(Uri uri) {
+    public void deleteTakenImage(Uri uri) {
         File file = new File(uri.getPath());
         if(file.exists()) {
             boolean isDelete = file.delete();
@@ -136,19 +146,19 @@ public class CameraSetting {
         }
     }
 
-    public void stopCamera() {
-        cameraExecutor.shutdown();
-    }
+    public void stopCamera() { cameraExecutor.shutdown(); }
 
-    public void stopPreview() {
-        cameraProvider.unbindAll();
-    }
+    public void stopPreview() { cameraProvider.unbindAll(); }
 
     public Bitmap getTakenImage() { return takenImageBitmap; }
 
-    public Bitmap getPrevImage() { return prevtakenImageBitmap; }
+    public Bitmap getPrevImage() { return prevTakenImageBitmap; }
+
+    public Uri getTakenUri() { return takenImageUri; }
+
+    public Uri getPrevUri() { return prevTakenImageUri; }
 
     public void setTakenImageNull() { takenImageBitmap = null; }
 
-    public void setPrevImageNull() { prevtakenImageBitmap = null; }
+    public void setPrevImageNull() { prevTakenImageBitmap = null; }
 }

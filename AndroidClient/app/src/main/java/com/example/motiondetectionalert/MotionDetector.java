@@ -9,18 +9,26 @@ import androidx.fragment.app.Fragment;
 import java.util.Locale;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.concurrent.Semaphore;
 
 public class MotionDetector extends Fragment {
-    private final double differenceThreshold = 5;
+
+    private final double differenceThreshold = 3;
     private final CameraSetting cameraSetting;
 
     private Timer imageCaptureTimer;
     private Timer endMonitoringTimer;
     private boolean isMonitoring;
 
-    public MotionDetector(CameraSetting camerasetting) {
+    private final Semaphore imageOpenLock;
+
+    private final Notifier notifier;
+
+    public MotionDetector(CameraSetting camerasetting, Semaphore imageOpenLock) {
         cameraSetting = camerasetting;
         isMonitoring = false;
+        this.imageOpenLock = imageOpenLock;
+        this.notifier = new Notifier(cameraSetting);
     }
 
     public void startMonitoring() {
@@ -66,8 +74,18 @@ public class MotionDetector extends Fragment {
         TimerTask imageCaptureTimerTask = new TimerTask() {
             @Override
             public void run() {
-                takePhoto();
-                detectMotion(cameraSetting.getTakenImage(), cameraSetting.getPrevImage());
+                try {
+                    imageOpenLock.acquire();
+                    takePhoto();
+                    // takePhoto() 안에서 release됨
+
+                    imageOpenLock.acquire();    // 사진을 다 저장하기 전까지는 여기서 block된다.
+                    detectMotion(cameraSetting.getTakenImage(), cameraSetting.getPrevImage());
+                    imageOpenLock.release();
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         };
 
@@ -80,7 +98,7 @@ public class MotionDetector extends Fragment {
         };
 
         imageCaptureTimer.schedule(imageCaptureTimerTask, 1500, 1500);
-        endMonitoringTimer.schedule(endMonitoringTimerTask, 1000 * 3600);
+        endMonitoringTimer.schedule(endMonitoringTimerTask, 1000 * 3600 * 4);
     }
 
     private void stopTimer() {
@@ -107,7 +125,12 @@ public class MotionDetector extends Fragment {
         if (difference > differenceThreshold) {
             // 움직임 감지 이벤트
             stopMonitoring();
+//            notifier.sendAlert();
             Log.d("detectMotion", "motion detected!");
+        }
+        else {
+            // 모션이 감지되지 않으면 send alert 할 일 없으니까 찍은 사진을 지운다.
+            cameraSetting.deleteTakenImage(cameraSetting.getTakenUri());
         }
     }
 
