@@ -55,8 +55,6 @@
 
 ### 2021-05-28 Fri
 
-Daily Scrum 5.28 Fri
-
 하윤
 
 1. 함수 틀 제작
@@ -95,7 +93,7 @@ Daily Scrum 5.28 Fri
 - 어떻게 클라이언트와 서버가 통신할 것인가?
 
 
-## Daily Scrum 5.30 Sun
+### Daily Scrum 5.30 Sun
 
 하윤
 1. 서버 클라이언트 사이 통신, 소켓 시도
@@ -112,7 +110,7 @@ Daily Scrum 5.28 Fri
 - 양측 클라이언트 간의 통신 진행상황
 
 
-## Daily Scrum 5.31 Mon
+### Daily Scrum 5.31 Mon
 
 하윤
 1. 서버와 에뮬레이터 사이 통신을 소켓으로 시도
