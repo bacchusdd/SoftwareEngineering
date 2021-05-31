@@ -1,6 +1,7 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, redirect, jsonify
+from flask.helpers import url_for
 from db_handler import DBModule
-from motion_detector import MotionDetector
+from socket_app import SocketApp
 
 import config
 
@@ -8,28 +9,22 @@ app = Flask(__name__)
 db = DBModule()
 
 
-@app.route("/")
-def hello_world():
-    return "Hello AppServer!"
+@app.route("/startdetection", methods=["GET", "POST"])
+def start_detection():
+    if request.method == "GET":
+        return "Start_detection..."
+
+
+@app.route("/stopdetection", methods=["GET", "POST"])
+def stop_detection():
+    if request.method == "GET":
+        return "Stop_detection..."
 
 
 @app.route("/", methods=["GET", "POST"])
 def handle_request():
     print("Successful Connection")
-    return "Successful Connection"
-    # Get orders. Startdetection, stopdetection
-
-
-@app.route("/startdetection", methods=["GET", "POST"])
-def start_detection():
-    MotionDetector.start_monitoring()
-    return "Start detection..."
-
-
-@app.route("/stopdetection", methods=["GET", "POST"])
-def stop_detection():
-    MotionDetector.stop_monitoring()
-    return "Stop detection..."
+    return "Hello AppServer!"
 
 
 if __name__ == "__main__":

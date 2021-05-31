@@ -2,5 +2,7 @@
     <string name="app_name">MotionDetectionAlert</string>
     <string name="client_url_1">http://10.0.2.2:5554/</string>
     <string name="client_url_2">http://10.0.2.2:5556/</string>
-    <string name="flask_url">http://192.168.0.166:3306/</string>
+    <string name="flask_url">http://192.168.0.7:3306/</string>
+    <string name="localhost_url">192.168.0.6</string>
+    <string name="socket_url">http://127.0.0.1:9999/</string>
 </resources>

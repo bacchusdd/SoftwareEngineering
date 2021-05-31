@@ -4,10 +4,12 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.ImageDecoder;
 import android.net.Uri;
+import android.os.Build;
 import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.camera.core.CameraSelector;
 import androidx.camera.core.ImageCapture;
 import androidx.camera.core.ImageCaptureException;
@@ -90,6 +92,7 @@ public class CameraSetting {
 
         // 이미지 캡쳐 리스너 등록
         imageCapture.takePicture(outputOptions, ContextCompat.getMainExecutor(mainContext), new ImageCapture.OnImageSavedCallback() {
+            @RequiresApi(api = Build.VERSION_CODES.P)
             @Override
             public void onImageSaved(@NonNull ImageCapture.OutputFileResults outputFileResults) {
                 Uri savedUri = Uri.fromFile(photoFile);
@@ -113,6 +116,7 @@ public class CameraSetting {
         });
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.P)
     private Bitmap getImageBitmapFromUri(Uri uri) {
         Bitmap bitmap = null;
         try {

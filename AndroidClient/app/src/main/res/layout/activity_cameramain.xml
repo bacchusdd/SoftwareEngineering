@@ -5,24 +5,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".StartMonitoringActivity">
+    tools:context=".CameraMainActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center">
-        <Button
-            android:id="@+id/start_monitoring"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Start Monitoring" />
-        <Button
-            android:id="@+id/set_as_camera"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/darker_gray"
-            android:background="@android:color/white"
-            android:shadowColor="@android:color/transparent"
-            android:text="Set this device as camera"/>
+            android:text="This is Camera Device"/>
     </LinearLayout>
 </LinearLayout>

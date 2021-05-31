@@ -1,13 +1,16 @@
 package com.example.motiondetectionalert;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.util.Log;
+
+import androidx.fragment.app.Fragment;
 
 import java.util.Locale;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class MotionDetector {
+public class MotionDetector extends Fragment {
     private final double differenceThreshold = 5;
     private final CameraSetting cameraSetting;
 
@@ -37,6 +40,20 @@ public class MotionDetector {
         cameraSetting.setTakenImageNull();
         stopTimer();
         isMonitoring = false;
+
+        ClientSocketThread clientSocketThread = new ClientSocketThread(9998, 1);
+        clientSocketThread.start();
+        try {
+            clientSocketThread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        if(clientSocketThread.getOutputCode() == 2){
+            Intent cameraMonitoringIntent = new Intent(this.getActivity(), CameraMainActivity.class);
+             startActivity(cameraMonitoringIntent); //Move Scene
+        }
+
     }
 
     public void takePhoto() {
