@@ -49,4 +49,4 @@ Records of our team meetings.
 
 ### History
 - [History Sprint](HistorySprint.md)
-- [Additional Explanation for History](HistoryExplain.md)
+- [Additional Explanation](HistoryExplain.md)
