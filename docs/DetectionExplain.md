@@ -21,7 +21,13 @@
   <img src="image/detection_1.png" width="250px">
   <img src="image/detection_2.png" width="250px">
 - 소켓을 통해 모니터링 시작 명령을 받으면 각각 화면이 바뀜 <br/>
+
   <img src="image/detection_3.png" width="250px">
   <img src="image/detection_4.png" width="250px">
+- 카메라 화면에서 움직임이 감지되면 사진이 서버를 거쳐 DB에 저장된다. <br/>
+  
+  <img src="image/detection_5.PNG" width="250px">
+- 카메라 기기에서 모니터링 중인 화면. <br/>
 
-- 카메라 화면에서 움직임이 감지되면 사진이 서버를 거쳐 DB에 저장된다.
+  <img src="image/detection_8.PNG">
+- 카메라 기기에서 움직임 감지시 DB에 사진이 저장된 모습
