@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                     dialog = builder.setMessage("Failed to login.").setNegativeButton("ok", null).create();
                     dialog.show();
                     numOfAttempts++;
-                    if (numOfAttempts > 5) {
+                    if (numOfAttempts > 10) {
                         numOfAttempts = 0;
                         Intent intent = new Intent(MainActivity.this,LoginBlockActivity.class);
                         startActivity(intent);
